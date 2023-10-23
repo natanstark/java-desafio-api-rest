@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 	
-	 private final Logger logger  = (Logger) LoggerFactory.getLogger(GlobalExceptionHandler.class);
+	 private final org.slf4j.Logger logger  = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 	
 	@ExceptionHandler(IllegalArgumentException.class)
 	public ResponseEntity<String> handleBusinessException(IllegalArgumentException businessException){
